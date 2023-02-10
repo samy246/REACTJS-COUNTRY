@@ -10,6 +10,7 @@ function SingleCountry() {
   const { name } = useParams();
 
   const country = allCountries.find((country) => country.name === name);
+  console.log("country",country);
   
   const {
     alpha2Code,
@@ -64,13 +65,19 @@ function SingleCountry() {
               <p>Population: <span>{population.toLocaleString('en-US')}</span></p>
               <p>Region: <span>{region}</span></p>
               <p>Subregion: <span>{subregion}</span></p>
-              <p>Capital: <span>{capital}</span></p>
+              <p>Capital: <span>{
+              country['capital'] !== undefined ? capital : "This country has no capital"
+              
+              }</span></p>
             </article>
 
             <div className="extra-detail-position">
               <p>Top Level Domain: <span>{topLevelDomain}</span></p>
               {/* antartica error currencies */}
-              <p>Currencies: <span>{currencies.map((cur) => cur.name).join(", ")}</span></p>
+              <p>Currencies: <span>{
+                
+              country['currencies'] !== undefined ? currencies.map((cur) => cur.name).join(", "):"This Country Has No Currencies"
+              }</span></p>
                {/* antartica error currencies */}
               <p>Languages: <span>{languages.map((lan) => lan.name).join(", ")}</span></p>
             </div>
