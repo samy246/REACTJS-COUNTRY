@@ -7,7 +7,7 @@ function Card({country}) {
 
     return(
       
-        <div className=  "country-card">
+        <div className="country-card">
 
             <div className="country-preview">
                 <Link to={`/singlecountry/${country.name}`}
