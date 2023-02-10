@@ -205,7 +205,7 @@ body {
   
       .search-field:focus
       {
-        left: 10px;
+        /* left: 10px; */
           outline: none;
       }
 
