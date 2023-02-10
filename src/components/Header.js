@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Context } from "../Context";
-import ThemeSwitcher from "./ThemeSwitcher";
+
 
 function Header() {
-    const { darkMode } = useContext(Context);
+   
 
     return(
         <header className=  "hero-container">

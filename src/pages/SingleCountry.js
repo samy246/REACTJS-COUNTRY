@@ -59,7 +59,7 @@ function SingleCountry() {
             </div>
 
             <article className="detail-info-position">
-              <h2>{name}</h2>
+              <h2>Country:{name}</h2>
               <p>Native name: <span>{nativeName}</span></p>
               <p>Population: <span>{population.toLocaleString('en-US')}</span></p>
               <p>Region: <span>{region}</span></p>
