@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { Context } from "../Context";
 
 function Card({country}) {
-  const  { darkMode } = useContext(Context);
+  // const  { darkMode } = useContext(Context);
 
     return(
       
-        <div className= {darkMode ? "country-card-dark" : "country-card"}>
+        <div className=  "country-card">
 
             <div className="country-preview">
                 <Link to={`/singlecountry/${country.name}`}
@@ -20,7 +20,7 @@ function Card({country}) {
                 </Link>
             </div>
 
-            <div className= {darkMode ? "country-info-dark" : "country-info"}>
+            <div className= "country-info">
 
                 <div className="country-detail">
 
@@ -29,7 +29,7 @@ function Card({country}) {
                 </div>
 
                 <p>Population: <span>{country.population.toLocaleString('en-US')}</span></p>
-                <p>Region: <span>{country.region}</span></p>
+                <p>Region: <span>{country.region !== undefined ?  country.region : "This country has no region"}</span></p>
                 <p>Capital: <span>{country.capital !== undefined ?  country.capital : "This country has no capital"}</span></p>
               </div>
             </div>

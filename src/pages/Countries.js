@@ -4,9 +4,6 @@ import { Context } from "../Context";
 import Card from "../components/Card";
 import SearchFilterCountry from "../components/SearchFilterCountry";
 
-// The main page in which resides most of the functionality stored in variable countries:
-// Load definite results, filter by region and search for a country. Iterate all countries
-// and make an instance of the Card component so that there's a card for each country.
 function Countries() {
     const { allCountries,
             query, 
@@ -37,10 +34,7 @@ function Countries() {
     <Card key={country.alpha2Code} country= {country} />
  ));
 
- // Although it seems misleading or inappropriate, in order to avoid 
- // accessibility issues i had to add a landmark region
- // for the back-to-top button, considering it's placed at the end of the
- // page and also for its role, i decided to use a footer landmark!
+
     return (
         <>
         <main className="main-content">
@@ -53,9 +47,10 @@ function Countries() {
             
                 <button className= {`
                                     ${countries.length !== allCountries.length  ? "load-more-btn" : "hide"}
-                                    ${darkMode ? "load-more-btn-dark" : "load-more-btn"}
+                                   
                                    `}
                         onClick={showMoreCountries}
+                        //  ${darkMode ? "load-more-btn-dark" : "load-more-btn"}
                 >
                 Load More
                </button> 

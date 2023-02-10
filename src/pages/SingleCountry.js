@@ -6,7 +6,7 @@ import { Context } from "../Context";
 // the variable name can be used to render each country.
 // Destructure the country object and pass data in render.
 function SingleCountry() {
-  const { allCountries, darkMode } = useContext(Context);
+  const { allCountries} = useContext(Context);
   const { name } = useParams();
 
   const country = allCountries.find((country) => country.name === name);
@@ -27,13 +27,7 @@ function SingleCountry() {
   } = country;
 
 
-  // This structure has worked perfectly with the old API.
-  // Unfortunately the old API is no longer available (the change occured nearly at the end of the project), 
-  // the new one is almost the same except for borders. If a country has no border countries, there's no property
-  // so the page is blank because of the above destructuring. Currently The API is unstable, i had other issues
-  // but they fix them. 
-  // EDIT: I fixed it after publishing it on the platform by adding the empty array you see above, 
-  // thanks to Anton member of FEM!
+
   
   const borderCountries = borders.map(border => {
       const nation = allCountries.find (
@@ -48,7 +42,7 @@ function SingleCountry() {
     <main className="main-content">
       <div className="back-btn-container">
         <Link to="/">
-          <button className= {darkMode ? "back-btn-dark" : "back-btn"}>
+          <button className= "back-btn">
             <i className="fa fa-long-arrow-left" aria-hidden="true"></i>
             Back
           </button>
@@ -63,7 +57,10 @@ function SingleCountry() {
               <h2>Country:{name}</h2>
               <p>Native name: <span>{nativeName}</span></p>
               <p>Population: <span>{population.toLocaleString('en-US')}</span></p>
-              <p>Region: <span>{region}</span></p>
+              <p>Region: <span>{
+              // region
+              country['region'] !== undefined ? region : "This country has no region"
+              }</span></p>
               <p>Subregion: <span>{subregion}</span></p>
               <p>Capital: <span>{
               country['capital'] !== undefined ? capital : "This country has no capital"
@@ -93,7 +90,7 @@ function SingleCountry() {
                           key={index} 
                         >
                           <button
-                            className= {darkMode ? "border-dark" : "border"}>
+                            className="border">
                             {country.name}
                           </button>
                         </Link>
