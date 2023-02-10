@@ -77,9 +77,9 @@ body {
 } */
   
   
-
-          /* #Layout */
-
+   /* =================
+          #Layout
+      ================= */
   
   .hero-container {
       min-height: 6rem;
@@ -111,9 +111,9 @@ body {
      
   }
   
-  
-      /* #Detail Page Layout */
-
+   /* ====================
+      #Detail Page Layout
+      ==================== */
     
   .back-btn-container {
       margin-top: 2.5rem;
@@ -138,9 +138,9 @@ body {
   /* .search-field::placeholder{
     padding:15px;
   } */
- 
-          /* #Typography */
-
+   /* =================
+          #Typography
+      ================= */
   
   .hero-text {
       font-size: var(--font-size-l);
@@ -163,18 +163,24 @@ body {
       font-weight: 400;
   }
   
-
-        /* #Components */
- 
+  /* =================
+        #Components
+     ================= */ 
   
-.dark-mode-btn {
+  /* .dark-mode-btn {
       background-color: transparent;
       border: none;
       display: flex;
       align-items: center;
       cursor: pointer;
-  } 
-      
+  } */
+  
+      /* .theme-switch {
+        width: 1rem;
+        height: 1rem;
+        margin-left: -1rem;
+        margin-right: .5rem;  
+      } */
   
   
   .form {
@@ -290,6 +296,15 @@ select>option{
       transition: transform .2s;
    }
 
+    /* .country-card-dark {
+        margin-bottom: 2rem;
+        border-radius: .3rem;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        transition: transform .2s;
+        box-shadow: none;
+        background-color: var(--dark-blue);
+    } */
 
   
       .image {
@@ -305,20 +320,23 @@ select>option{
           object-fit: cover;
       }
 
-  
+      /* .country-card-dark  */
       .country-preview img {
         width: 100%;
         object-fit: cover;
       }
   
       .country-info
- 
+      /* .country-info-dark  */
       {
           padding: 1.7rem;
           justify-content: space-between;
       }
 
-
+      /* .country-info-dark {
+          background-color: var(--dark-blue);
+      } */
+      
       .country-title {
           font-size: var(--font-size-m);
           display: flex;
@@ -330,7 +348,7 @@ select>option{
       }
 
       .load-more-btn
-    
+      /* .load-more-btn-dark  */
       {
         width: 6.5rem;
         height: 2rem;
@@ -341,7 +359,12 @@ select>option{
         background-color: var(--white);
         cursor: pointer;
       }
-
+/*     
+      .load-more-btn-dark {
+        box-shadow: none;
+        color: var(--white);
+        background-color: var(--dark-blue);
+      } */
     
       .top {
         transition: all .25s ease-in-out;
@@ -390,9 +413,9 @@ select>option{
     }
     
 
-
-      /* #Detail page Components */
- 
+  /* ========================
+      #Detail page Components
+     ======================== */ 
   
   .back-btn
   /* .back-btn-dark */
@@ -408,7 +431,11 @@ select>option{
       cursor: pointer;
   }
 
-
+  /* .back-btn-dark {
+      background-color: var(--dark-blue);
+      box-shadow: none;
+      color: var(--white);
+  } */
   
       .fa-long-arrow-left {
           margin-right: .2rem;
@@ -427,7 +454,7 @@ select>option{
   }
 
   .border
-
+  /* .border-dark  */
   {
       margin-bottom: .5rem;
       margin-right: .6rem;
@@ -460,9 +487,9 @@ select>option{
  
   @media screen and (min-width: 48em) {
       
-    
-          /* #Layout */
-
+    /* =================
+          #Layout
+       ================= */
     
       .cards-container {
         display: grid;
@@ -470,9 +497,9 @@ select>option{
         gap: 6.5rem;
     }
 
-    
-        /* #Detail Page Layout & Components */
-
+    /* =================================
+        #Detail Page Layout & Components
+       ================================= */
 
      .detail-container {
         display: grid;
@@ -504,9 +531,9 @@ select>option{
 
 @media screen and (min-width: 75em) {
 
- 
-          /* #Layout */
-
+    /* =================
+          #Layout
+       ================= */
 
     .main-content {
         max-width: 90%;
@@ -516,9 +543,9 @@ select>option{
         padding: 2rem 3.2rem;
     }
 
-   
-          /* #Typography */
-
+    /* =================
+          #Typography
+       ================= */
 
     .hero-text {
         font-size:  var(--font-size-l);
@@ -531,9 +558,9 @@ select>option{
         font-weight: 400;
     }
 
-
-      /*     #Components*/
-
+    /* =================
+          #Components
+       ================= */
     .form {
         flex-direction: row;
         justify-content: space-between;  
@@ -550,7 +577,7 @@ select>option{
     }
 
     select
-   
+    /* .select-dark  */
     {
         width: 12.5rem;
         margin-top: 3rem;
@@ -565,15 +592,15 @@ select>option{
     }
 
     .load-more-btn
-
+    /* .load-more-btn-dark  */
     {
         width: 8rem;
         height: 3rem;
     }
 
-
-        /* #Detail Page Layout */
-     
+    /* ====================
+        #Detail Page Layout
+       ==================== */
     .detail-info-position {
         display: flex;
         flex-direction: column;
@@ -593,14 +620,14 @@ select>option{
     }
 
     .back-btn
-
+    /* .back-btn-dark  */
     {
         width: 8rem;
         height: 3rem;
     }
 
     .border
-
+    /* .border-dark  */
     {
         padding: .7rem 1.9rem;
     }
