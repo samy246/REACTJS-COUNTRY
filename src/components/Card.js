@@ -30,7 +30,7 @@ function Card({country}) {
 
                 <p>Population: <span>{country.population.toLocaleString('en-US')}</span></p>
                 <p>Region: <span>{country.region}</span></p>
-                <p>Capital: <span>{country.capital}</span></p>
+                <p>Capital: <span>{country.capital !== undefined ?  country.capital : "This country has no capital"}</span></p>
               </div>
             </div>
         </div>
