@@ -41,8 +41,8 @@ function ContextProvider({children}) {
             setFilterData,
             query,
             setQuery,
-            darkMode,
-            setDarkMode
+            // darkMode,
+            // setDarkMode
             }}
             >
             {children}
