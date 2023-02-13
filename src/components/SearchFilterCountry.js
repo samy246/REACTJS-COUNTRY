@@ -3,7 +3,7 @@ import { Context } from "../Context";
 
 // The two filters in which resides the target value
 function SearchFilterCountry() {
-    const { query, setQuery, setFilterData } = useContext(Context);
+    const { query, setQuery, setFilterData,darkMode } = useContext(Context);
 
     return (
     
@@ -12,20 +12,20 @@ function SearchFilterCountry() {
         >
             <div className="search-icon-position">
 
-            <i className="fa fa-search icon"></i>
+            <i className={`fa fa-search icon${darkMode ? "fa darkmode" : ""}`}></i>
 
               <label htmlFor="search" className="hide">Search for a country</label>
                 <input type="search"
                        id="search"
                        name=  "search-form"
-                       className=  "search-field"
+                       className=  {darkMode ? "search-field-dark" : "search-field"}
                        placeholder="Search for a country..." 
                        value={query}
                        onChange={(e) => setQuery(e.target.value)}
                 />
             </div>
             
-            <select className= "select"
+            <select className=  {darkMode ? "select-dark" : "select"}
                     aria-label="filter by region"
                     onChange={e => setFilterData(e.target.value)}
             >

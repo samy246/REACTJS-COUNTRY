@@ -18,7 +18,7 @@ function Countries() {
     
     
     const showMoreCountries = () => {
-        setVisibleCards (prevVisibleCards => prevVisibleCards + 59);
+        setVisibleCards (prevVisibleCards => prevVisibleCards + 57);
     };
 
     const handleScroll = () => {
@@ -45,14 +45,13 @@ function Countries() {
                 {countries}
             </section>
             
-            <div className="place-load-more-btn">
+            <div className="place-loadmore-btn">
             
                 <button className= {`
-                                    ${countries.length !== allCountries.length  ? "load-more-btn" : "hide"}
-                                   
-                                   `}
-                        onClick={showMoreCountries}
-                        //  ${darkMode ? "load-more-btn-dark" : "load-more-btn"}
+                                    ${countries.length !== allCountries.length  ? "loadmore-btn" : "hide"}
+                                    ${darkMode ? "loadmore-btn-dark" : "loadmore-btn"}
+                                    `}
+                    onClick={showMoreCountries}
                 >
                 Load More
                </button> 

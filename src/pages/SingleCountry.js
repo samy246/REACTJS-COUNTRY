@@ -6,7 +6,7 @@ import { Context } from "../Context";
 // the variable name can be used to render each country.
 // Destructure the country object and pass data in render.
 function SingleCountry() {
-  const { allCountries} = useContext(Context);
+  const { allCountries,darkMode} = useContext(Context);
   const { name } = useParams();
 
   const country = allCountries.find((country) => country.name === name);
@@ -42,7 +42,7 @@ function SingleCountry() {
     <main className="main-content">
       <div className="back-btn-container">
         <Link to="/">
-          <button className= "back-btn">
+          <button className= {darkMode ? "back-btn-dark" : "back-btn"}>
             <i className="fa fa-long-arrow-left" aria-hidden="true"></i>
             Back
           </button>
@@ -90,7 +90,7 @@ function SingleCountry() {
                           key={index} 
                         >
                           <button
-                            className="border">
+                             className= {darkMode ? "border-dark" : "border"}>
                             {country.name}
                           </button>
                         </Link>
