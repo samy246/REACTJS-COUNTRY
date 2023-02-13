@@ -11,7 +11,7 @@ function ContextProvider({children}) {
     
     const [query, setQuery] = useState("");
     const [filterData, setFilterData] = useState("All");
-    const [darkMode, setDarkMode] = useState(false);
+    // const [darkMode, setDarkMode] = useState(false);
     
     const urlAllCountries = 'https://restcountries.com/v2/all';
 
