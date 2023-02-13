@@ -14,6 +14,8 @@ function Countries() {
     const searchField = ["name"];
     
     const [visibleCards, setVisibleCards] = useState(59);
+
+    
     
     const showMoreCountries = () => {
         setVisibleCards (prevVisibleCards => prevVisibleCards + 59);

@@ -25,7 +25,7 @@ function SearchFilterCountry() {
                 />
             </div>
             
-            <select className=  "select"
+            <select className= "select"
                     aria-label="filter by region"
                     onChange={e => setFilterData(e.target.value)}
             >
