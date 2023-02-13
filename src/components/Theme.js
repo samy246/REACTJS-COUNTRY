@@ -20,7 +20,7 @@ function ThemeSwitcher() {
         <button className={`dark-mode-btn ${darkMode ? "text-for-dark-mode" : "dark-mode-text "}`}
                 aria-label="Light mode / Dark mode"
                 onClick={handleTheme}
-                id={`${darkMode ? "dark-mode-text" : "light-mode-text"}`}
+                id={`${darkMode ? "dark-mode-text" :"light-mode-text"}`}
         >
             {darkMode ?
                 <i className="fa fa-sun-o theme-switch" aria-hidden="true"></i> 
