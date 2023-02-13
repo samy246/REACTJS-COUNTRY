@@ -1,6 +1,44 @@
+/* :root{
+  --very-light-grey:#D3D3D3;
+--white:#ffff;
+--dark-grey:
+}
+
+*{
+  box-sizing: border-box;
+}
+ 
+body { 
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  overflow-x: hidden;
+  background-color: lightgray;
+
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.2rem;
+}
+
+.hero-container {
+  min-height: 6rem;
+  background-color: white;
+ 
+  box-shadow: 0 0 5px darkgrey;
+  
+} */
 
 
 
+
+
+ /* =================
+      #Theme colors
+    ================= */
 
     :root {
       --very-light-grey:  hsl(0, 0%, 98%); /* (Light Mode Background) */
@@ -16,7 +54,10 @@
       --font-size-m: 0.875rem;
       --font-size-s: 0.75rem;
   }
-
+  
+   /* =================
+        #Global Style
+      ================= */
   
       * {box-sizing: border-box;font-family: 'Nunito Sans', sans-serif;}
   
@@ -40,7 +81,7 @@
   
   
 
-
+          /* #Layout */
 
   
   .hero-container {
@@ -74,7 +115,7 @@
   }
   
   
-
+      /* #Detail Page Layout */
 
     
   .back-btn-container {
@@ -97,7 +138,11 @@
       margin-bottom: 3.75rem;
   }
   
-
+  /* .search-field::placeholder{
+    padding:15px;
+  } */
+ 
+          /* #Typography */
 
   
   .hero-text {
@@ -107,7 +152,7 @@
       .dark-mode-text {
           font-size: var(--font-size-xm);
           font-weight: 600;
-         
+          /* color: white; */
       }
   
   a,
@@ -122,7 +167,7 @@
   }
   
 
-
+        /* #Components */
  
   
 .dark-mode-btn {
@@ -179,7 +224,7 @@
       .search-field:focus,
       .search-field-dark 
       {
-        
+        /* left: 10px; */
           outline: none;
       }
 
@@ -229,14 +274,14 @@
         border-radius: .3rem;
         background-color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 3%) 0px 0px 4px 4px;
-        
+        /* box-shadow: 1px 1px 5px var(--dark-grey); */
         -moz-appearance: none;
 	    -webkit-appearance: none;
 	    appearance: none;
         background-image: 
-
+        /* url('../public/images/down-arrow-svgrepo-com.svg'); */
         url( 'data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-
+         /* */ 
         background-repeat: no-repeat, repeat;
         background-position: right .7em top 50%, 0 0;
         background-size: .65em auto, 100%;
@@ -385,7 +430,7 @@
     
 
 
-   
+      /* #Detail page Components */
  
   
   .back-btn,
@@ -460,7 +505,7 @@
   @media screen and (min-width: 48em) {
       
     
-    
+          /* #Layout */
 
     
       .cards-container {
@@ -470,7 +515,7 @@
     }
 
     
-  
+        /* #Detail Page Layout & Components */
 
 
      .detail-container {
@@ -504,6 +549,8 @@
 @media screen and (min-width: 75em) {
 
  
+          /* #Layout */
+
 
     .main-content {
         max-width: 90%;
@@ -514,7 +561,7 @@
     }
 
    
-
+          /* #Typography */
 
 
     .hero-text {
@@ -525,6 +572,7 @@
     .text-for-dark-mode {
         font-size: 1.1rem;
 
+        /* var(--font-size-l); */
         font-weight: 400;
         
     }
@@ -532,10 +580,13 @@
 
     #dark-mode-text{
         color: white;
-       
+        /* font-weight: 400;
+        font-size: 1.1rem; */
 
     }
 
+
+      /*     #Components*/
 
     .form {
         flex-direction: row;
@@ -579,6 +630,7 @@
     }
 
 
+        /* #Detail Page Layout */
      
     .detail-info-position {
         display: flex;
