@@ -284,10 +284,6 @@ body {
             outline: none;
         }
 
-select>option{
-/* border-color: aqua; */
-    /* background-color: aliceblue; */
-}
 
         .select-dark,
         .select-dark:focus {
